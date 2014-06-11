@@ -24,7 +24,7 @@ namespace FilenameToUnixTime
             logForm = new LogForm();
         }
 
-        private void folderButton_Click(object sender, EventArgs e)
+        private void buttonFolder_Click(object sender, EventArgs e)
         {
             if (folderDialog.ShowDialog() == DialogResult.OK)
             {
@@ -33,7 +33,7 @@ namespace FilenameToUnixTime
             }
         }
 
-        private void filesButton_Click(object sender, EventArgs e)
+        private void buttonFiles_Click(object sender, EventArgs e)
         {
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -42,7 +42,7 @@ namespace FilenameToUnixTime
             }
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
+        private void buttonClear_Click(object sender, EventArgs e)
         {
             _files.Clear();
             listView.Items.Clear();
@@ -101,7 +101,7 @@ namespace FilenameToUnixTime
             return (includePath ? Path.Combine(Path.GetDirectoryName(file), unixfile) : unixfile);
         }
 
-        private void convertButton_Click(object sender, EventArgs e)
+        private void buttonConvert_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < listView.Items.Count; i++)
             {
@@ -125,6 +125,8 @@ namespace FilenameToUnixTime
                     listView.Items[i].SubItems[2].Text = ex.Message;
                     logForm.AddLog("error", String.Format("'{0}' could not be renamed because '{1}'", file, ex.Message));
                 }
+
+                Application.DoEvents();
             }
 
             buttonRevert.Enabled = true;
@@ -136,7 +138,7 @@ namespace FilenameToUnixTime
         }
 
 
-        private void revertButton_Click(object sender, EventArgs e)
+        private void buttonRevert_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < listView.Items.Count; i++)
             {
@@ -161,6 +163,8 @@ namespace FilenameToUnixTime
                         logForm.AddLog("error", String.Format("'{0}' could not be renamed because '{1}'", file, ex.Message));
                     }
                 }
+
+                Application.DoEvents();
             }
 
             buttonRevert.Enabled = false;

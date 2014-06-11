@@ -51,7 +51,7 @@
             this.buttonFolder.TabIndex = 1;
             this.buttonFolder.Text = "Add Folder...";
             this.buttonFolder.UseVisualStyleBackColor = true;
-            this.buttonFolder.Click += new System.EventHandler(this.folderButton_Click);
+            this.buttonFolder.Click += new System.EventHandler(this.buttonFolder_Click);
             // 
             // buttonConvert
             // 
@@ -62,7 +62,7 @@
             this.buttonConvert.TabIndex = 3;
             this.buttonConvert.Text = "Convert";
             this.buttonConvert.UseVisualStyleBackColor = true;
-            this.buttonConvert.Click += new System.EventHandler(this.convertButton_Click);
+            this.buttonConvert.Click += new System.EventHandler(this.buttonConvert_Click);
             // 
             // listView
             // 
@@ -104,7 +104,7 @@
             this.buttonFiles.TabIndex = 0;
             this.buttonFiles.Text = "Add Files...";
             this.buttonFiles.UseVisualStyleBackColor = true;
-            this.buttonFiles.Click += new System.EventHandler(this.filesButton_Click);
+            this.buttonFiles.Click += new System.EventHandler(this.buttonFiles_Click);
             // 
             // buttonClear
             // 
@@ -114,7 +114,7 @@
             this.buttonClear.TabIndex = 5;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.clearButton_Click);
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonLog
             // 
@@ -137,7 +137,7 @@
             this.buttonRevert.TabIndex = 8;
             this.buttonRevert.Text = "Revert";
             this.buttonRevert.UseVisualStyleBackColor = true;
-            this.buttonRevert.Click += new System.EventHandler(this.revertButton_Click);
+            this.buttonRevert.Click += new System.EventHandler(this.buttonRevert_Click);
             // 
             // buttonAbout
             // 
